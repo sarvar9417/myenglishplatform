@@ -96,6 +96,15 @@ export default function GameScreen({ item, currentMode, onCheck, onNext, checked
     [checked, inputs, onCheck, onNext]
   );
 
+  // Shake animation on wrong answer
+  useEffect(() => {
+    if (checked && !isCorrect) {
+      setShake(true);
+      const timer = setTimeout(() => setShake(false), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [checked, isCorrect]);
+
   // Determine question display
   let questionLabel, questionWord, questionHint;
   if (currentMode === 1) {
@@ -144,15 +153,6 @@ export default function GameScreen({ item, currentMode, onCheck, onNext, checked
     if (getFieldStatus(fieldId) === "correct") return inputs[fieldId];
     return item[fieldId]; // show correct answer
   };
-
-  // Shake animation on wrong answer
-  useEffect(() => {
-    if (checked && !isCorrect) {
-      setShake(true);
-      const timer = setTimeout(() => setShake(false), 500);
-      return () => clearTimeout(timer);
-    }
-  }, [checked, isCorrect]);
 
   return (
     <div

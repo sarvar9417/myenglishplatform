@@ -12,36 +12,7 @@ const MODULES = [
     route: "/play/verbs",
     badge: "Asosiy",
   },
-  {
-    id: "vocabulary",
-    icon: "📖",
-    title: "So'z Boyligi",
-    desc: "Kategoriyalar bo'yicha 200+ so'z o'rganing",
-    color: "#10b981",
-    bg: "#ecfdf5",
-    route: "/play/vocabulary",
-    badge: "Yangi",
-  },
-  {
-    id: "grammar",
-    icon: "📚",
-    title: "Grammar",
-    desc: "11 ta mavzuda grammatika o'rganing",
-    color: "#f59e0b",
-    bg: "#fffbeb",
-    route: "/play/grammar",
-    badge: "Yangi",
-  },
-  {
-    id: "daily",
-    icon: "📅",
-    title: "Kunlik Test",
-    desc: "Har kuni bland test bilan bilimingizni sinang",
-    color: "#ec4899",
-    bg: "#fdf2f8",
-    route: "/play/daily",
-    badge: "Yangi",
-  },
+  // So'z Boyligi, Grammar, Kunlik Test vaqtincha o'chirilgan
 ];
 
 export default function Dashboard() {

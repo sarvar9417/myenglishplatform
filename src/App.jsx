@@ -7,9 +7,7 @@ import Dashboard from "./components/Dashboard";
 import GameHeader from "./components/GameHeader";
 import GameScreen from "./components/GameScreen";
 import ResultScreen from "./components/ResultScreen";
-import VocabularyScreen from "./components/VocabularyScreen";
-import GrammarScreen from "./components/GrammarScreen";
-import DailyTestScreen from "./components/DailyTestScreen";
+// VocabularyScreen, GrammarScreen, DailyTestScreen vaqtincha o'chirilgan
 import useGame from "./hooks/useGame";
 import "./App.css";
 
@@ -157,44 +155,7 @@ export default function App() {
           }
         />
 
-        <Route
-          path="/play/vocabulary"
-          element={
-            <ProtectedRoute>
-              <div className="app-container">
-                <div className="content-area">
-                  <VocabularyScreen />
-                </div>
-              </div>
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/play/grammar"
-          element={
-            <ProtectedRoute>
-              <div className="app-container">
-                <div className="content-area">
-                  <GrammarScreen />
-                </div>
-              </div>
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/play/daily"
-          element={
-            <ProtectedRoute>
-              <div className="app-container">
-                <div className="content-area">
-                  <DailyTestScreen />
-                </div>
-              </div>
-            </ProtectedRoute>
-          }
-        />
+        {/* /play/vocabulary, /play/grammar, /play/daily vaqtincha o'chirilgan */}
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
